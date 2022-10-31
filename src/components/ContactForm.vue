@@ -77,7 +77,7 @@
             Field,
             ErrorMessage,
         },
-        emits: ["submit:contact", "delete:contact"],
+        emits: ["submit:contact", "delete:contact", "add:contact"],
         props: {
             contact: { type: Object, required: true }
         },
@@ -114,6 +114,9 @@
             deleteContact() {
                 this.$emit("delete:contact", this.contactLocal.id);
             },
+            addContact() {
+                this.$emit("add:contact", this.contactLocal);
+            }
         },
     };
 </script>
